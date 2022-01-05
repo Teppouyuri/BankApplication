@@ -22,7 +22,7 @@ public class UserController {
         this.jwtUtility  = jwtUtility;
     }
 
-    @GetMapping
+    @GetMapping("/getall")
     public JsonResponse getAllUsers(){
         return new JsonResponse(true, "listing all users", this.userService.getAllUsers());
     }
@@ -32,6 +32,7 @@ public class UserController {
         User tempUser = this.userService.createUser(user);
         if(tempUser != null){
             return new JsonResponse(true, jwtUtility.genToken(tempUser.getId()), tempUser.getUsername());
+            //return new JsonResponse(true, "User created", tempUser.getUsername());
         } else{
             return new JsonResponse(false, "Username or email already exists", null);
         }
@@ -98,6 +99,7 @@ public class UserController {
         if (tempUser != null) {
             //session.setAttribute("loggedInUser", tempUser);
             response = new JsonResponse(true, jwtUtility.genToken(tempUser.getId()),tempUser);
+            //response = new JsonResponse(true, "Logged in successful", tempUser);
         } else {
             response = new JsonResponse(false, "Invalid username or password. (Remember, these are case sensitive!)", null);
         }
