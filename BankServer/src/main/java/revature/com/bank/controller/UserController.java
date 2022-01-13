@@ -22,7 +22,7 @@ public class UserController {
         this.jwtUtility  = jwtUtility;
     }
 
-    @GetMapping("/getall")
+    @GetMapping()
     public JsonResponse getAllUsers(){
         return new JsonResponse(true, "listing all users", this.userService.getAllUsers());
     }
