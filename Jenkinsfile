@@ -10,7 +10,7 @@ pipeline {
         stage('Path to POM') { 
             steps {
                
-                sh "mvn -f path/to/pom.xml BankServer/POM.xml"
+                sh "mvn -f path/to/pom.xml /BankServer/POM.xml"
             }
         }
         
