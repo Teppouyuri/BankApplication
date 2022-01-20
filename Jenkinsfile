@@ -7,13 +7,6 @@ pipeline {
            }
         }
         
-        stage('Path to POM') { 
-            steps {
-               
-                sh "mvn -f path/to/pom.xml /BankServer/POM.xml"
-            }
-        }
-        
         stage('Install and Clean') { 
             steps {
                
