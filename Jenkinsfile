@@ -7,6 +7,13 @@ pipeline {
            }
         }
         
+        stage('Install and Clean') { 
+            steps {
+               
+                sh "mvn clean install"
+            }
+        }
+        
         stage('Compile and Clean') { 
             steps {
                
