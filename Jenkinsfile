@@ -10,14 +10,14 @@ pipeline {
         stage('Install and Clean') { 
             steps {
                
-                sh "mvn clean install"
+                sh "mvn -f ("Teppouyuri/BankApplication/BankServer/POM.xml") install"
             }
         }
         
         stage('Compile and Clean') { 
             steps {
                
-                sh "mvn clean compile"
+                sh "mvn -f ("Teppouyuri/BankApplication/BankServer/POM.xml") compile"
             }
         }
        
