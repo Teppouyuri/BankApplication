@@ -1,11 +1,11 @@
 pipeline {
-//     agent any 
-//     stages {
-//          stage('Get to Server Folder') {
-//            steps {
-//               sh "cd BankServer" 
-//            }
-//         }
+    agent any 
+    stages {
+         stage('Get to Server Folder') {
+           steps {
+              sh "cd BankServer" 
+           }
+        }
         
         stage('Compile and Clean') { 
             steps {
