@@ -7,12 +7,12 @@ pipeline {
            }
         }
         
-        stage('Install and Clean') { 
-            steps {
+//         stage('Install and Clean') { 
+//             steps {
                
-                sh "mvn -f ("Teppouyuri/BankApplication/BankServer/POM.xml") install"
-            }
-        }
+//                 sh "mvn -f ("Teppouyuri/BankApplication/BankServer/POM.xml") install"
+//             }
+//         }
         
         stage('Compile and Clean') { 
             steps {
